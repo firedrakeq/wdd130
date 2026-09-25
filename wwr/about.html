@@ -10,8 +10,8 @@
 </head>
 <body>
     <header>
-        <!-- Grid layout container -->
-        <img src="images/logo.png" alt="Rafting Company Logo">
+        <!-- Fixed path to point out of the wwr folder to root images -->
+        <img src="../images/logo.png" alt="Rafting Company Logo">
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html" class="active">About Us</a>
@@ -22,46 +22,44 @@
 
     <main>
         <div class="hero">
-            <img src="images/hero.jpg" alt="White water rafting adventure banner">
+            <img src="../images/hero.jpg" alt="White water rafting adventure banner">
             <h1>Dry Water Rafting Co.</h1>
             <article>
-                <img src="images/profile.jpg" alt="Featured team adventure snapshot">
+                <img src="../images/profile.jpg" alt="Featured team adventure snapshot">
                 <p>We provide the most exhilarating and safe river rafting adventures in the region. Our certified guides ensure a memorable trip.</p>
             </article>
         </div>
 
-        <!-- History Section: Structured for the wireframe grid layout -->
         <section class="history-section">
             <h2>History</h2>
             <div class="history-container">
                 <p>Founded in 2026, our company started with just two boats and a passion for the river. Over the years, we have expanded our fleet and guided thousands of adventurers safely down the rapids.</p>
-                <img src="images/history.jpg" alt="Historical photo of our first rafting trip">
+                <img src="../images/history.jpg" alt="Historical photo of our first rafting trip">
                 <p>Our commitment to preserving the natural beauty of the canyons while giving you an unforgettable rush drives everything we do. Join our legacy on the water.</p>
             </div>
         </section>
 
-        <!-- Adventures Section: Structured with 5 semantic figures for horizontal display -->
         <section class="adventures-section">
             <h2>Adventure Awaits You!</h2>
             <div class="adventure-gallery">
                 <figure>
-                    <img src="images/adventure1.jpg" alt="Intense whitewater rapids">
+                    <img src="../images/adventure1.jpg" alt="Intense whitewater rapids">
                     <figcaption>Los Dientes del Diablo</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/adventure2.jpg" alt="Raft navigating massive waves">
+                    <img src="../images/adventure2.jpg" alt="Raft navigating massive waves">
                     <figcaption>Big Mallard</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/adventure3.jpg" alt="Scenic morning river run">
+                    <img src="../images/adventure3.jpg" alt="Scenic morning river run">
                     <figcaption>Half Day Adventure</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/adventure4.jpg" alt="Group enjoying a swift river channel">
+                    <img src="../images/adventure4.jpg" alt="Group enjoying a swift river channel">
                     <figcaption>Salmon River Run</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/adventure5.jpg" alt="Guide navigating wild whitewater drops">
+                    <img src="../images/adventure5.jpg" alt="Guide navigating wild whitewater drops">
                     <figcaption>Full Day Thrill</figcaption>
                 </figure>
             </div>
@@ -70,12 +68,12 @@
 
     <footer>
         <p>©2026 ❖ Dry Water Rafting Co. ❖ Quentin Chime</p>
-        <!-- Replaced nested nav with a div container to avoid duplicate major landmark navigation tags -->
-        <div class="socialmedia">
-            <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook Icon"></a>
-            <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter Icon"></a>
-            <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram Icon"></a>
-        </div>
+        <!-- FIX: Restored <nav class="socialmedia"> for the validator audit script -->
+        <nav class="socialmedia">
+            <a href="https://facebook.com" target="_blank"><img src="../images/facebook.png" alt="Facebook Icon"></a>
+            <a href="https://twitter.com" target="_blank"><img src="../images/twitter.png" alt="Twitter Icon"></a>
+            <a href="https://instagram.com" target="_blank"><img src="../images/instagram.png" alt="Instagram Icon"></a>
+        </nav>
     </footer>
 </body>
 </html>
