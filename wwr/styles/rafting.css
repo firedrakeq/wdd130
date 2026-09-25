@@ -21,11 +21,12 @@ body {
 header {
     background-color: white;
     padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    /* UPDATE: Changed from Flexbox to CSS Grid per requirements */
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    align-items: center;
 }
 
 header img {
@@ -34,7 +35,9 @@ header img {
 }
 
 nav {
+    /* UPDATE: Handled by Flexbox layout alignment pushing items right */
     display: flex;
+    justify-content: flex-end;
     gap: 15px;
 }
 
@@ -46,8 +49,9 @@ nav a {
     display: block;
 }
 
-nav a:hover {
+nav a:hover, nav a.active {
     color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
 }
 
 /* Main Layout content setup */
@@ -101,7 +105,7 @@ main {
 
 /* Lower Section layout configuration */
 section {
-    max-width: 900px;
+    max-width: 1200px; /* Increased from 900px to allow adequate horizontal landscape spacing */
     margin: 30px auto;
     padding: 25px;
     background-color: white;
@@ -111,7 +115,7 @@ section {
 
 section h2 {
     color: var(--secondary-color);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 p {
@@ -119,26 +123,81 @@ p {
     line-height: 1.6;
 }
 
+/* --- NEW: History Grid Layout Section --- */
+.history-container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.history-container img {
+    width: 250px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- NEW: Adventures Flexbox Gallery Layout Section --- */
+.adventure-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.adventure-gallery figure {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+    background-color: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.adventure-gallery figure img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover; /* Keeps imagery structured perfectly without squishing aspect ratios */
+    border-radius: 2px;
+}
+
+.adventure-gallery figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
 /* Footer layout elements */
 footer {
     background-color: var(--primary-color);
     color: white;
-    text-align: center;
-    padding: 25px;
+    padding: 25px 40px;
     margin-top: 40px;
     border-top: 3px solid var(--secondary-color);
+    /* UPDATE: Changed to Flexbox for horizontal layout separation */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer p {
-    margin-bottom: 10px;
+    margin-bottom: 0; /* Reset baseline override alignment */
 }
 
-footer nav.socialmedia {
-    justify-content: center;
+/* UPDATE: Targets the updated .socialmedia div block layout wrapper */
+footer .socialmedia {
+    display: flex;
     gap: 20px;
 }
 
 .socialmedia img {
     width: 32px;
     height: 32px;
+    transition: transform 0.2s ease;
+}
+
+.socialmedia img:hover {
+    transform: scale(1.15); /* Adds a interactive zoom feature to links */
 }
