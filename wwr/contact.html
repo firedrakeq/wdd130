@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dry Oar Boating Company</title>
+    <meta name="description" content="Get in touch with Dry Oar Boating Company. Find our address, phone number, embedded map location, and contact form for white water rafting inquiries.">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Dry Oar Boating Company Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="site-plan.html">Site Plan</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <!-- Company Information Section -->
+        <section class="company-info">
+            <h1>Contact Our Team</h1>
+            <div class="info-block">
+                <p><strong>📍 Address:</strong> 123 Rapid River Way, Garden Valley, ID 83622</p>
+                <p><strong>📞 Phone:</strong> (208) 555-0199</p>
+                <p><strong>✉️ Email:</strong> info@dryoarboating.com</p>
+            </div>
+            <div class="map-container">
+                <!-- Small Embedded Google Map -->
+                <iframe src="https://google.com" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="form-container">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post">
+                <label for="username">Full Name:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="useremail">Email Address:</label>
+                <input type="email" id="useremail" name="useremail" required>
+
+                <label for="purpose">Message Purpose:</label>
+                <select id="purpose" name="purpose">
+                    <option value="general">General Inquiry</option>
+                    <option value="reservation">Booking & Reservation</option>
+                    <option value="feedback">Website Feedback</option>
+                </select>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <div class="checkbox-block">
+                    <input type="checkbox" id="newsletter" name="newsletter" value="subscribe">
+                    <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                </div>
+
+                <button type="submit">Book My Adventure</button>
+            </form>
+        </section>
+
+        <!-- Employee Profiles Section -->
+        <section class="employee-profiles">
+            <h2>Our Experienced Guides</h2>
+            <div class="employee-grid">
+                <figure>
+                    <img src="images/employee1.jpg" alt="Rafting Guide John standing near a river raft">
+                    <figcaption><strong>John Doe</strong> - Senior Expedition Captain</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee2.jpg" alt="Rafting Instructor Jane smiling in safety gear">
+                    <figcaption><strong>Jane Smith</strong> - Safety & Instruction Coordinator</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee3.jpg" alt="River Guide Alex holding an adventure paddle">
+                    <figcaption><strong>Alex Jones</strong> - Whitewater Specialist</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Dry Oar Boating Company | Quentin Chime</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
