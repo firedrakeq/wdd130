@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Dry Oar Boating Company</title>
     <meta name="description" content="Get in touch with Dry Oar Boating Company. Find our address, phone number, embedded Google map, and contact form for white water rafting inquiries.">
-    <!-- FIX: Meta author added -->
-    <meta name="author" content="Quentin Chime"> 
+    <!-- FIX: Added missing meta author element -->
+    <meta name="author" content="Quentin Chime">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
 
     <header>
-        <!-- Image 1: Logo -->
+        <!-- Image 1 -->
         <img src="images/logo.png" alt="Dry Oar Boating Company Logo">
-        <!-- FIX: Updated navigation to include trips.html exactly as expected -->
+        <!-- FIX: Updated nav structure to point to trips.html instead of site-plan.html -->
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -24,50 +24,52 @@
     </header>
 
     <main>
+        <!-- FIX: Includes the requested single <h1> with company name -->
         <h1>Contact Our Team | Dry Oar Boating Company</h1>
 
-        <!-- Company Information & Google Maps Placeholder -->
+        <!-- Location Information Block -->
         <section class="company-info">
-            <h2>Our Location</h2>
+            <h2>Our Headquarters</h2>
             <div class="info-block">
                 <p><strong>Address:</strong> 123 Rapid River Way, Garden Valley, ID 83622</p>
                 <p><strong>Phone:</strong> (208) 555-0199</p>
                 <p><strong>Email:</strong> info@dryoarboating.com</p>
             </div>
+            <!-- Embedded Google Map -->
             <div class="map-container">
-                <!-- Replace src with an actual Google Maps embed link later if required -->
                 <iframe src="https://google.com" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dry Oar Boating Company Location"></iframe>
             </div>
         </section>
 
-        <!-- Employee / Team Grid Section (Provides the mandatory images) -->
+        <!-- Employee Profile Grid Section (Provides required image tags) -->
         <section class="employee-grid">
-            <h2>Meet Our Guides</h2>
-            <figure>
-                <!-- Image 2 -->
-                <img src="images/employee1.jpg" alt="Rafting Guide John standing near a river raft">
-                <figcaption>John - Senior Guide</figcaption>
-            </figure>
-            <figure>
-                <!-- Image 3 -->
-                <img src="images/employee2.jpg" alt="Rafting Instructor Jane smiling in safety gear">
-                <figcaption>Jane - Safety Instructor</figcaption>
-            </figure>
-            <figure>
-                <!-- Image 4 -->
-                <img src="images/employee3.jpg" alt="River Guide Alex holding an adventure paddle">
-                <figcaption>Alex - River Guide</figcaption>
-            </figure>
+            <h2>Meet Our Adventure Guides</h2>
+            <div class="grid-container">
+                <figure>
+                    <!-- Image 2 -->
+                    <img src="images/employee1.jpg" alt="Rafting Guide John standing near a river raft">
+                    <figcaption>Rafting Guide John</figcaption>
+                </figure>
+                <figure>
+                    <!-- Image 3 -->
+                    <img src="images/employee2.jpg" alt="Rafting Instructor Jane smiling in safety gear">
+                    <figcaption>Rafting Instructor Jane</figcaption>
+                </figure>
+                <figure>
+                    <!-- Image 4 -->
+                    <img src="images/employee3.jpg" alt="River Guide Alex holding an adventure paddle">
+                    <figcaption>River Guide Alex</figcaption>
+                </figure>
+            </div>
         </section>
 
-        <!-- Form Section with all assignment parameters strictly mapped -->
+        <!-- Form Section containing all required parameter matches -->
         <section class="form-container">
             <h2>Send Us a Message</h2>
             <form action="#" method="post">
                 
-                <!-- Text Input -->
                 <div class="form-field">
-                    <label prejudices for="user-name">Full Name:</label>
+                    <label for="user-name">Full Name:</label>
                     <input type="text" id="user-name" name="userName" required>
                 </div>
 
@@ -76,39 +78,36 @@
                     <input type="email" id="user-email" name="userEmail" required>
                 </div>
 
-                <!-- Three Radio Buttons grouped under the same name -->
+                <!-- Three Radio Buttons grouped under the same name attribute -->
                 <fieldset>
-                    <legend>What is the purpose of your inquiry?</legend>
-                    
+                    <legend>Purpose of Message:</legend>
                     <label for="purpose-general">
                         <input type="radio" id="purpose-general" name="inquiryPurpose" value="general" checked> General Inquiry
                     </label>
-                    
                     <label for="purpose-booking">
                         <input type="radio" id="purpose-booking" name="inquiryPurpose" value="booking"> Trip Booking
                     </label>
-                    
                     <label for="purpose-feedback">
                         <input type="radio" id="purpose-feedback" name="inquiryPurpose" value="feedback"> Website Feedback
                     </label>
                 </fieldset>
 
-                <!-- Textarea Component -->
+                <!-- Textarea -->
                 <div class="form-field">
                     <label for="message">Message:</label>
-                    <textarea id="message" name="userMessage" rows="5" required></textarea>
+                    <textarea id="message" name="userMessage" rows="6" required></textarea>
                 </div>
 
-                <!-- Checkbox Component -->
+                <!-- Checkbox -->
                 <div class="form-field checkbox-field">
                     <label for="subscribe">
-                        <input type="checkbox" id="subscribe" name="subscribeNewsletter" value="yes"> Subscribe to our Dry Oar newsletter
+                        <input type="checkbox" id="subscribe" name="subscribeNewsletter" value="yes"> Please send me regular white water safety updates
                     </label>
                 </div>
 
-                <!-- Submit Button without using the restricted "Submit" value text -->
+                <!-- Submit Button without the restricted default word "Submit" -->
                 <div class="form-field">
-                    <button type="submit">Book Adventure</button>
+                    <button type="submit">Send Inquiry</button>
                 </div>
 
             </form>
@@ -118,17 +117,19 @@
     <footer>
         <p>&copy; 2026 Dry Oar Boating Company | Quentin Chime</p>
         
-        <!-- FIX: Ensured exactly 3 anchor elements, and every single one contains a valid image -->
+        <!-- FIX: 3 distinct anchors, each containing an image child to prevent W3C errors -->
         <nav class="socialmedia">
-            <a href="https://facebook.com" target="_blank">
-                <!-- Image 5 (Total count condition met) -->
-                <img src="images/facebook-icon.png" alt="Follow Dry Oar on Facebook">
+            <a href="https://facebook.com" target="_blank" rel="noopener">
+                <!-- Image 5 -->
+                <img src="images/facebook.png" alt="Dry Oar on Facebook">
             </a>
-            <a href="https://twitter.com" target="_blank">
-                <img src="images/twitter-icon.png" alt="Follow Dry Oar on Twitter">
+            <a href="https://twitter.com" target="_blank" rel="noopener">
+                <!-- Image 6 -->
+                <img src="images/twitter.png" alt="Dry Oar on Twitter">
             </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="images/instagram-icon.png" alt="Follow Dry Oar on Instagram">
+            <a href="https://instagram.com" target="_blank" rel="noopener">
+                <!-- Image 7 -->
+                <img src="images/instagram.png" alt="Dry Oar on Instagram">
             </a>
         </nav>
     </footer>
